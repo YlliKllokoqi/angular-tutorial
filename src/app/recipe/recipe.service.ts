@@ -1,4 +1,3 @@
-import { EventEmitter } from "@angular/core";
 import { Ingredient } from "../shared/ingredient.model";
 import { Recipe } from "./recipe.model";
 
@@ -13,9 +12,15 @@ export class RecipeService{
         new Recipe('Salat', 'Auch Lecker?', 'https://www.gutekueche.at/storage/media/recipe/112666/6852_Gemischte-Salat_1.jpg', []),
       ];
 
-      recipeSelected = new EventEmitter<Recipe>();
-
       getRecipes(){
         return this.recipes;
+      }
+
+      getRecipe(id: number){
+        return this.recipes[id];
+      }
+
+      deleteRecipe(id: number){
+        this.recipes.splice(id, 1);
       }
 }

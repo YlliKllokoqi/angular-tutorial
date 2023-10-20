@@ -1,11 +1,11 @@
 <header>
     <ul class="nav nav-pills">
-        <li role="presentation" class=""><a href="#">EinkaufsListe</a></li>
-        <li role="presentation"><a href="#">Rezeptbuch</a></li>
+        <li role="presentation" routerLinkActive="active"><a [routerLink]="['/rezepte']">Rezeptbuch</a></li>
+        <li role="presentation" routerLinkActive="active"><a [routerLink]="['/einkaufsliste']">Einkaufsliste</a></li>
         <li>
           <div class="dropdown" appDropdown>
             <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false">
-              Dropdown button
+              Verwaltung
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <li><a class="dropdown-item" href="#">Speichern</a></li>
